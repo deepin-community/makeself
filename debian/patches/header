@@ -1,0 +1,16 @@
+Description: change path to header
+Origin: other
+Forwarded: not-needed
+
+--- makeself-2.2.0.orig/makeself.sh
++++ makeself-2.2.0/makeself.sh
+@@ -162,7 +162,7 @@
+ TAR_EXTRA=""
+ GPG_EXTRA=""
+ DU_ARGS=-ks
+-HEADER=`dirname "$0"`/makeself-header.sh
++HEADER=/usr/share/makeself/makeself-header.sh
+ SIGNATURE=""
+ TARGETDIR=""
+ NOOVERWRITE=n
+

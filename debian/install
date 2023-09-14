@@ -1,0 +1,2 @@
+makeself.sh /usr/bin
+makeself-header.sh /usr/share/makeself
