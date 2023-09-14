@@ -1,4 +1,16 @@
 #!/usr/bin/make -f
 
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
 %:
-	dh $@
+	dh $@ 
+
+override_dh_install:
+	dh_install
+	mv debian/makeself/usr/bin/makeself.sh debian/makeself/usr/bin/makeself
+	chmod 644 debian/makeself/usr/share/makeself/makeself-header.sh
+
+override_dh_auto_build:
+
+override_dh_auto_test:

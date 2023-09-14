@@ -1,5 +1,148 @@
-template-repository (1.0-1) unstable; urgency=medium
+makeself (2.4.5-1) unstable; urgency=medium
 
-  * Initial release
+  * The Akamai Technologies paid volunteer days release.
+  * New upstream version.
+    - added watch file
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Bartosz Fenski <fenio@debian.org>  Fri, 22 Oct 2021 10:54:36 +0200
+
+makeself (2.4.2-2) unstable; urgency=medium
+
+  * Source only upload.
+
+ -- Bartosz Fenski <fenio@debian.org>  Sun, 12 Jul 2020 16:56:55 +0200
+
+makeself (2.4.2-1) unstable; urgency=medium
+
+  * The Akamai Technologies paid volunteer days release.
+  
+ -- Bartosz Fenski <fenio@debian.org>  Thu, 09 Jul 2020 11:16:19 +0200
+
+makeself (2.4.0-1) unstable; urgency=medium
+
+  * The Akamai Technologies paid volunteer days release.
+  * New upstream release.
+
+ -- Bartosz Fenski <fenio@debian.org>  Wed, 02 May 2018 18:46:19 +0200
+
+makeself (2.2.0+git20161230-1) unstable; urgency=low
+
+  * The Akamai Technologies paid volunteer days release.
+  * New upstream snapshot. (Closes: #844318)
+  * Bumped Standard-Version and DH compatibility level.
+  * Minor fixes in debian/copyright to make lintian happy.
+
+ -- Bartosz Fenski <fenio@debian.org>  Fri, 30 Dec 2016 16:22:45 +0100
+
+makeself (2.2.0-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #690105)
+    - handles df output in more portable way (Closes: #641804)
+  * Repackaged from scratch.
+    - uses new packaging format 3.0 (Closes: #670738)
+    - uses new copyright format
+    - uses debhelper compatibility level 9 
+    - uses the newest Standards-Version
+    - fixes 2 lintian errors and 6 warnings
+
+ -- Bartosz Fenski <fenio@debian.org>  Mon, 09 Dec 2013 17:32:45 +0100
+
+makeself (2.1.5-1) unstable; urgency=low
+
+  * New upstream release.
+    - fixes "bad file descriptor" error (Closes: #426995)
+  * Removed three patches (implemented upstream)
+  * Bumped Standards-Version (no changes needed)
+  * Moved homepage's address to header.
+  * Removed watch file as it seems it's not possible to get current status
+    of upstream version (Closes: #449970).
+
+ -- Bartosz Fenski <fenio@debian.org>  Sat, 08 Mar 2008 14:37:14 +0100
+
+makeself (2.1.4-1) unstable; urgency=low
+
+  * The 'please always check if there is new upstream version before you 
+    start fixing bugs' release.
+  * New upstream version.
+    - fixes dotfiles and cdpath problem, so relevant patches were removed.
+
+ -- Bartosz Fenski <fenio@debian.org>  Wed,  8 Jun 2005 19:37:04 +0200
+
+makeself (2.1.3-5) unstable; urgency=low
+
+  * Added dot-temp-dir patch which should hopefully fix the following problems:
+    - proper handling of not existing archive dirs. (Closes: #312089)
+    - doesn't ignore dotfiles creating archive. (Closes: #312099)
+      Thanks to Marc Haber for spotting them. Both patches sent to upstream.
+    - we're now using mktemp for $tmpfile.
+
+ -- Bartosz Fenski <fenio@debian.org>  Tue,  7 Jun 2005 19:37:04 +0200
+
+makeself (2.1.3-4) unstable; urgency=low
+
+  * CDPATH is now unset in makeself-header (Closes: #289753)
+
+ -- Bartosz Fenski <fenio@debian.org>  Sun,  6 Feb 2005 20:45:02 +0100
+
+makeself (2.1.3-3) unstable; urgency=low
+
+  * s/fenio@o2.pl/fenio@debian.org/
+
+ -- Bartosz Fenski <fenio@debian.org>  Mon,  3 Jan 2005 22:35:03 +0100
+
+makeself (2.1.3-2) unstable; urgency=low
+
+   * debian/control:
+     - fixed typos noticed by Florian Zumbiehl (Closes: #277232)
+
+ -- Bartosz Fenski <fenio@o2.pl>  Sun, 21 Nov 2004 16:05:22 +0100
+
+makeself (2.1.3-1) unstable; urgency=low
+
+   * New upstream release
+     - with more complex args uses eval now (Closes: #245475)
+       Thanks for David Everly for noticing it.
+   * debian/copyright:
+     - distinguished copyright from license
+   * debian/control:
+     - renamed Build-Depends to Build-Depends-Indep
+     - added dpatch to Build-Depends-Indep
+     - removed empty Depends entry
+   * debian/rules:
+     - some modification to support dpatch stuff
+     - removed unnecessary comments
+     - changed manual path
+   * debian/patches/:
+     - added 00list file 
+     - added 01_makeself.patch renaming and replacing make-header path
+     - added 02_makeself.patch and 03_makeself-header.patch parsing type output 
+       Above two patches sent to upstream (Closes: #247777)
+       Thanks for David Everly for noticing it.
+   * debian/
+     - removed makeself.1 (it's now included by upstream)
+
+ -- Bartosz Fenski <fenio@o2.pl>  Thu, 25 Mar 2004 23:57:24 +0100
+
+makeself (2.1.2-3) unstable; urgency=low
+
+  * debian/control & debian/makeself.1
+    - s/extractible/extractable/ (Closes: #239614)
+      Thanks to Martin Schulze for noticing it.
+
+ -- Bartosz Fenski <fenio@o2.pl>  Sat, 22 Mar 2004 16:45:33 +0100
+
+makeself (2.1.2-2) unstable; urgency=low
+  
+  * debian/control: changed architecture to "all" (Closes: #239620)
+  
+ -- Bartosz Fenski <fenio@o2.pl>  Sat, 20 Mar 2004 17:55:37 +0100
+
+makeself (2.1.2-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #200151)
+  * Added manpage and sent it to upstream.
+  * Removed .sh suffix from script.
+  * Changed location of makeself-header to /usr/share/makeself
+
+ -- Bartosz Fenski <fenio@o2.pl>  Sat,  6 Mar 2004 11:49:57 +0100
+
